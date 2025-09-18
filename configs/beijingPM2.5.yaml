@@ -1,0 +1,27 @@
+data:
+  dataset: "beijingPM2.5"
+  miss_mechanism: "Original"
+  miss_ratio: 0
+  batch_size: 256
+  test_batch_size: 256
+  val_batch_size: 256
+
+model:
+  num_nodes: 35
+  hidden_size: 10
+  in_channel: 1
+  seqlen: 12
+  st_block: 5
+  #K:5
+  K: 5
+  #model:100
+  d_model: 100
+  n_heads: 2
+
+train:
+  cuda: 0
+  #lr:1e-3
+  lr: 2e-3
+  epochs: 150
+  save_model_path: save_model/
+  result_path: results/
